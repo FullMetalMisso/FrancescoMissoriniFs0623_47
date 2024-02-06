@@ -1,0 +1,107 @@
+
+SELECT *
+  FROM [dbo].[Products]
+
+
+SELECT *
+  FROM [dbo].[Products]
+  WHERE UnitsInStock >= 40 
+
+SELECT [EmployeeID]
+      ,[LastName]
+      ,[FirstName]
+      ,[Title]
+      ,[TitleOfCourtesy]
+      ,[BirthDate]
+      ,[HireDate]
+      ,[Address]
+      ,[City]
+      ,[Region]
+      ,[PostalCode]
+      ,[Country]
+      ,[HomePhone]
+      ,[Extension]
+      ,[Photo]
+      ,[Notes]
+      ,[ReportsTo]
+      ,[PhotoPath]
+  FROM [dbo].[Employees]
+  WHERE City = 'London'
+
+
+SELECT [OrderID]
+      ,[CustomerID]
+      ,[EmployeeID]
+      ,[OrderDate]
+      ,[RequiredDate]
+      ,[ShippedDate]
+      ,[ShipVia]
+      ,[Freight]
+      ,[ShipName]
+      ,[ShipAddress]
+      ,[ShipCity]
+      ,[ShipRegion]
+      ,[ShipPostalCode]
+      ,[ShipCountry]
+  FROM [dbo].[Orders]
+ORDER BY Freight desc 
+
+
+SELECT [OrderID]
+      ,[CustomerID]
+      ,[EmployeeID]
+      ,[OrderDate]
+      ,[RequiredDate]
+      ,[ShippedDate]
+      ,[ShipVia]
+      ,[Freight]
+      ,[ShipName]
+      ,[ShipAddress]
+      ,[ShipCity]
+      ,[ShipRegion]
+      ,[ShipPostalCode]
+      ,[ShipCountry]
+  FROM [dbo].[Orders]
+WHERE Freight >90 and Freight < 200
+
+
+SELECT [ProductID]
+      ,[ProductName]
+      ,[SupplierID]
+      ,[CategoryID]
+      ,[QuantityPerUnit]
+      ,[UnitPrice]
+      ,[UnitsInStock]
+      ,[UnitsOnOrder]
+      ,[ReorderLevel]
+      ,[Discontinued]
+  FROM [dbo].[Products]
+  WHERE CategoryID = 1
+
+
+SELECT [OrderID]
+      ,[ProductID]
+      ,[UnitPrice]
+      ,[Quantity]
+      ,[Discount]
+  FROM [dbo].[Order Details]
+WHERE Discount >0 
+
+SELECT [OrderID]
+      ,[CustomerID]
+      ,[EmployeeID]
+      ,[OrderDate]
+      ,[RequiredDate]
+      ,[ShippedDate]
+      ,[ShipVia]
+      ,[Freight]
+      ,[ShipName]
+      ,[ShipAddress]
+      ,[ShipCity]
+      ,[ShipRegion]
+      ,[ShipPostalCode]
+      ,[ShipCountry]
+  FROM [dbo].[Orders]
+  WHERE CustomerID = 'BOTTM' and Freight > 50
+
+
